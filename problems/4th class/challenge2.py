@@ -1,0 +1,5 @@
+print('===============Challenge 2===============')
+day = input('Day: ')
+month = input('Month: ')
+year = input('Year: ')
+print('you were born in',month,'/',day,'/',year,'Right?')
