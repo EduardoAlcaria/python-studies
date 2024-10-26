@@ -1,0 +1,6 @@
+name = str(input('Type your name: '))
+splited = name.split()
+print(name.lower())
+print(name.upper())
+print(len(name.replace(' ','')))
+print(len(splited[0]))
