@@ -1,3 +1,7 @@
 from random import choice
-names = ['Eduardo', 'Pedro', 'Artur', 'Miguel']
-print('The one who will clean is: {}'.format(choice(names)))
+n1 = str(input('1st name: '))
+n2 = str(input('2nd name: '))
+n3 = str(input('3th name: '))
+n4 = str(input('4th name: '))
+list = [n1, n2, n3, n4]
+print('the chosen one is {}'.format(choice(list)))
