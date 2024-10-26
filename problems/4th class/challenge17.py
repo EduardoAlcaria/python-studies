@@ -1,4 +1,4 @@
-from math import sqrt
+from math import hypot
 alt = float(input('Type the altitude: '))
 base = float(input('Type the base: '))
-print('the hypotenuse is: {:.2f}'.format(sqrt(alt ** 2 + base ** 2)))
+print('the hypotenuse is: {:.2f}'.format(hypot(alt, base)))
