@@ -1,4 +1,4 @@
-name = str(input('Type your name: '))
+name = str(input('Type your name: ')).strip()
 splited = name.split()
 print('your name in lower case is',name.lower())
 print('your name in upper case is',name.upper())
