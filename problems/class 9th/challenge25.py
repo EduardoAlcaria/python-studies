@@ -1,2 +1,2 @@
-name = str(input('Type a name: '))
-print('silva' in name)
+name = str(input('Type a name: ')).strip()
+print('silva' in name.lower())
