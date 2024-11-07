@@ -1,4 +1,4 @@
-houseValue = int(input('Type the house price $ '))
+houseValue = float(input('Type the house price $ '))
 salary = float(input('How much do you earn $ '))
 years = int(input('In how many years you will pay: '))
 
