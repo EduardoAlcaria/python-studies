@@ -2,6 +2,7 @@ from random import choice
 
 rpc_list = ["rock", "paper", "scissors"]
 pc = choice(rpc_list)
+
 green = "\033[1;32m"
 red = "\033[1;31m"
 reset = "\033[0m"
