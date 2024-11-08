@@ -9,5 +9,7 @@ elif bmi >= 18.5 and bmi < 25:
     print('healthy weight')
 elif bmi >= 25 and bmi < 30:
     print('overweight')
-elif bmi >= 30:
-    print('obese class')
+elif bmi >= 30 and bmi < 40:
+    print('obesid')
+else:
+    print('morbid obesity')
