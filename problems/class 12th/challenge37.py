@@ -7,4 +7,4 @@ elif choice == '2':
 elif choice == '3':
     print('The hex is {}'.format(hex(n)[2:]))
 else:
-    print('bye')
+    print('invalid option')
