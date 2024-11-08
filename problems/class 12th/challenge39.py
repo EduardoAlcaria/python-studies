@@ -1,5 +1,5 @@
 from datetime import datetime
-born = int(input('Enter the year the you was born '))
+born = int(input('Enter the year that you was born '))
 age = datetime.now().year - born
 if age == 18:
     print('You need to sign up for the army')
