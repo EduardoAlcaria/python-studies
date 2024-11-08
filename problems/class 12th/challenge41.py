@@ -1,12 +1,13 @@
-age = int(input('Enter an age: '))
-
+from datetime import date
+born = int(input('Enter the year that you was born: '))
+age = date.today().year - born
 if age <= 9:
-    print('Little')
+    print('Classification: Little')
 elif age > 9 and age <= 14:
-    print('middle')
+    print('Classification: Middle')
 elif age > 14 and age <= 19:
-    print('big')
+    print('Classification: Big')
 elif age > 19 and age <= 20:
-    print('10+')
+    print('Classification: 10+')
 else:
-    print('adult')
+    print('Classification: Adult')
