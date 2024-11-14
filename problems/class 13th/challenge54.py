@@ -4,7 +4,7 @@ major = 0
 minor = 0
 for c in range(1, 8):
     year = int(input(f"which year the {c} person was born: "))
-    if cyear - year >= 18:
+    if cyear - year >= 21:
         major += 1
     else:
         minor += 1
