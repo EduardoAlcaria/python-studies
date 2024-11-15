@@ -10,5 +10,5 @@ for c in range(1,6):
             maxW = w
         if w < minW:
             minW = w
-print(f"the minimal weight was {minW}")
-print(f"the max weight was {maxW}")
+print(f"the minimal weight was {minW}KG")
+print(f"the max weight was {maxW}KG")
