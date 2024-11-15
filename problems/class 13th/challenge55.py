@@ -1,14 +1,14 @@
 minW = 0
 maxW = 0
-for c in range(1, 6):
-    p = float(input(f"Weight of the {c} person: "))
+for c in range(1,6):
+    w = float(input(f"Weight of the {c} person: "))
     if c == 1:
-        minW = p
-        maxW = p
+        minW = w
+        maxW = w
     else:
-        if p > maxW:
-            maxW = p
-        elif p < minW:
-            minW = p
-print(maxW)
-print(minW)
+        if w > maxW:
+            maxW = w
+        if w < minW:
+            minW = w
+print(f"the minimal weight was {minW}")
+print(f"the max weight was {maxW}")
