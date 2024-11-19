@@ -1,8 +1,13 @@
+from time import sleep
 again = ""
 choice = ""
+n1 = float(input("Enter a number: "))
+n2 = float(input("Enter another number: "))
 while not choice == "5" and not again == "n":
-    n1 = float(input("Enter a number: "))
-    n2 = float(input("Enter another number: "))
+    print(20*"-=")
+    if choice == "4":
+        n1 = float(input("Enter a new number: "))
+        n2 = float(input("Enter a another new number: "))
     choice = str(input("""
 Addiction [1]
 Subtraction [2]
@@ -12,19 +17,19 @@ Exit [5]
 > """))
     if choice == "1":
         print(f"the sum is {n1 + n2}")
-        again = str(input("You want to try again? [y/n]: ")).lower()
+        sleep(1)
     elif choice == "2":
         print(f"the difference is {n1 - n2}")
-        again = str(input("You want to try again? [y/n]: ")).lower()
+        sleep(1)
     elif choice == "3":
         if n1 > n2:
             print(f"The major number is {n1}")
+            sleep(1)
         elif n2 > n1:
             print(f"the major number is {n2}")
+            sleep(1)
         else:
             print(f"They are the same")
-        again = str(input("You want to try again? [y/n]: "))
-    elif choice == "4": 
-        print("type new numbers")
+            sleep(1)
 print("exiting")
     
