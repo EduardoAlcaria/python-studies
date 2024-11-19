@@ -1,10 +1,9 @@
 from time import sleep
-again = ""
 choice = ""
 n1 = float(input("Enter a number: "))
 n2 = float(input("Enter another number: "))
-while not choice == "5" and not again == "n":
-    print(20*"-=")
+while choice != "5":
+    print(20*"-=", end="\n")
     if choice == "4":
         n1 = float(input("Enter a new number: "))
         n2 = float(input("Enter a another new number: "))
@@ -31,5 +30,8 @@ Exit [5]
         else:
             print(f"They are the same")
             sleep(1)
-print("exiting")
+    elif choice == "5":
+        print("exiting")
+    else:
+        print("invalid option try again")
     
