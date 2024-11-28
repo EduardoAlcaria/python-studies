@@ -10,8 +10,7 @@ while True:
         majorage += 1
     if gen == "m":
         totmale += 1
-    else:
-        if gen == "f" and age < 20:
+    if gen == "f" and age < 20:
             fem_less_20 += 1
     answer = " "
     while answer not in "yn":
