@@ -14,7 +14,7 @@ while True:
             fem_less_20 += 1
     answer = " "
     while answer not in "yn":
-        answer = str(input("Would you like to continue: [y/n]: ")).lower().strip()[0]
+        answer = str(input("Would you like to continue [y/n]? ")).lower().strip()[0]
     if answer == "n":
         break
 print(f"There is {majorage} peoples above 18 years old")
