@@ -7,13 +7,9 @@ while True:
     product_name = str(input("Product name: "))
     price = float(input("Price: $"))
     count += 1
-    if count == 1:
+    if count == 1 or price < cheaper_price:
         cheaper_name = product_name
         cheaper_price = price
-    else:
-        if price < cheaper_price:
-            cheaper_price = price
-            cheaper_name = product_name
     if price > 1000:
         more_thousand += 1
     tot_purchase += price
