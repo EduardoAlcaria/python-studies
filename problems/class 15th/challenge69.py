@@ -6,7 +6,7 @@ while True:
     gen = " "
     while gen not in "mf":
         gen = str(input("Gender: [M/F]: ")).lower().strip()[0]
-    if age > 18:
+    if age >= 18:
         majorage += 1
     if gen == "m":
         totmale += 1
