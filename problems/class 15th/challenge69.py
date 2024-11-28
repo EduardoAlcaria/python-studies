@@ -19,4 +19,4 @@ while True:
         break
 print(f"There is {majorage} peoples above 18 years old")
 print(f"There is {totmale} males")
-print(f"There are {fem_less_20} under 20 years old")
+print(f"There is {fem_less_20} woman under 20 years old")
