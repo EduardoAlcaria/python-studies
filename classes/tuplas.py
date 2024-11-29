@@ -6,3 +6,4 @@ for c in range(0, len(snacks)):
 print("-="*30)
 for enum,c in enumerate(snacks):
     print(f"{c}, {enum}")
+
