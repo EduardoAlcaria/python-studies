@@ -6,5 +6,5 @@ print("{:^45}".format("PRODUCT LIST"))
 print("_"*45)
 for c in range(0, len(products), 2):
     print("{:.<20}".format(products[c]), end="")
-    print(f"${products[c+1]}")
+    print(f"${products[c+1]:.2f}")
 print("_"*45)
