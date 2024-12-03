@@ -1,4 +1,6 @@
-products = ("pen", 3,"notebook", 2000, "apple", 4)
+products = ("pen", 3,
+            "notebook", 2000, 
+            "apple", 4)
 print("_"*45)
 print("{:^45}".format("PRODUCT LIST"))
 print("_"*45)
