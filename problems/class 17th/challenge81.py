@@ -2,7 +2,7 @@ num = []
 continue_answer = " "
 while continue_answer not in "nN":
     num.append(int(input("Type a number: ")))
-    continue_answer = str(input("Want to continues [y/n]: "))
+    continue_answer = str(input("Want to continues [y/n]: ")).strip()
 print(f"You have typed {len(num)} numbers")
 print(f"The numbers in descending order are {sorted(num, reverse=True)}")
 if 5 in num:
