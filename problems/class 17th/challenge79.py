@@ -1,13 +1,13 @@
 num = []
-continue_question = " "
-c = 0
-while continue_question not in "nN":
-    num.append(int(input("Type a number: ")))
-    if num.count(num[c]) > 1:
-        print("number already added")
-        del(num[c])
+continue_answer = " "
+while True:
+    n = int(input("Type a number: "))
+    if n not in num:
+        num.append(n)
+        print("number add")
     else:
-        print("Number added")
-        c += 1
-    continue_question = str(input("Want to continue? [y/n] ")).strip()
+        print("number already add")
+    continue_answer = str(input("want to continue? [y/n] ")).strip()
+    if continue_answer in "nN":
+        break
 print(sorted(num))
