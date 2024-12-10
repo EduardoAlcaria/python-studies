@@ -1,8 +1,8 @@
 num = []
 higher = 0
 lower = 0
-for c in range(0,5):
-    num.append(int(input(f"Type the {c+1} number: ")))
+for c in range(0, 5):
+    num.append(int(input(f"Type the [{c+1}/5] number: ")))
     if c == 0:
         higher = num[c]
         lower = num[c]
@@ -11,13 +11,13 @@ for c in range(0,5):
             higher = num[c]
         if num[c] < lower:
             lower = num[c]
-print(f"the sequence is {num}")
-print(f"the highest number is {higher} and its position is ", end="")
-for i, c in enumerate(num):
-    if c == higher:
-        print(f"{i}... ",end="")
-print(f"\nthe lowest number is {lower} and its position is ",end="")
-for i, c in enumerate(num):
-    if c == lower:
-        print(f"{i}... ", end="")
+print(f"The sequence is {num}")
+print(f"The lowest number is {lower} and its positon is: ",end="")
+for e,l in enumerate(num):
+    if l == lower:
+        print(f"{e}... ",end="")
+print(f"\nthe highest number is {higher} and its position is: ",end="")
+for e, h in enumerate(num):
+    if h == higher:
+        print(f"{e}... ",end="")
 print()
