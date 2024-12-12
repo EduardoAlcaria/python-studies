@@ -1,15 +1,15 @@
 esp = str(input("Type a mathematics esprection: "))
 p = []
-for c in esp:
-    if c == "(":
+for e in esp:
+    if e == "(":
         p.append("(")
-    elif c == ")":
+    elif e == ")":
         if len(p) > 0:
             p.pop()
         else:
             p.append(")")
             break
 if len(p) == 0:
-    print("right")
+    print("Right")
 else:
-    print("wrong")
+    print("Wrong")
