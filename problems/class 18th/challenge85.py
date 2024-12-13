@@ -13,7 +13,3 @@ numbers.append(odd[:])
 odd.clear()
 print(f"The even numbers are {sorted(numbers[0])}")
 print(f"The odd numbers are {sorted(numbers[1])}")
-
-
-
-
