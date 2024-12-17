@@ -1,31 +1,30 @@
 people = list()
 data = list()
-highW = 0
-lowW = 0
+h = 0
+l = 0
 while True:
     data.append(str(input("Name: ")))
-    data.append(int(input("Weight: ")))
+    data.append(int(input("KG: ")))
     people.append(data[:])
     data.clear()
-    continue_asnwer = str(input("want to continue? [y/n]: ")).strip()
-    if continue_asnwer in "nN":
+    ask_continue = str(input("Want to continue? [y/n]: ")).strip()
+    if ask_continue in "nN":
         break
-for e, w in enumerate(people):
+for e,p in enumerate(people):
     if e == 0:
-        highW = w[1]
-        lowW = w[1]
+        h = p[1]
+        l = p[1]
     else:
-        if w[1] > highW:
-            highW = w[1]
-        if w[1] < lowW:
-            lowW = w[1]
-print(f"you have typed {len(people[0])} peoples")
-print(f"The lowest weight was {lowW} and it belongs to ",end="")
-for e, l in enumerate(people):
-    if lowW == l[1]:
-        print(f"[{people[e][0]}]",end=" ")
-print(f"\nthe highest weight was {highW} and it belongs to ",end="")
-for e, h in enumerate(people):
-    if highW == h[1]:
-        print(f"[{people[e][0]}]",end=" ")
+        if p[1] > h:
+            h = p[1]
+        if p[1] < l:
+            l = p[1]
+print(f"the lowest weight was {l} and it belongs to ", end="")
+for p in people:
+    if p[1] == l:
+        print(p[0],end=" ")
+print(f"\nand the highest one was {h} and it belongs to ",end="")
+for p in people:
+    if p[1] == h:
+        print(p[0],end=" ")
 print()
