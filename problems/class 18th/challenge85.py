@@ -1,15 +1,15 @@
-numbers = list()
+num = []
 even = list()
 odd = list()
 for c in range(0, 7):
-    n = int(input(f"Type a number:[{c+1}/7]: "))
-    if n % 2 == 0:
+    n = int(input(f"Type the {c+1} number: "))
+    if n % 2 == 1:     
         even.append(n)
-    if n % 2 == 1:
+    if n % 2 == 0:
         odd.append(n)
-numbers.append(even[:])
+num.append(odd[:])
+num.append(even[:])
 even.clear()
-numbers.append(odd[:])
 odd.clear()
-print(f"The even numbers are {sorted(numbers[0])}")
-print(f"The odd numbers are {sorted(numbers[1])}")
+print(f"the even values are {sorted(num[0])}")
+print(f"the odd values are {sorted(num[1])}")
