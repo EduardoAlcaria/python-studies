@@ -1,16 +1,12 @@
-peoples = list()
-data = list()
-totabove = totunder = 0
-for c in range(0, 3):
-    data.append(str(input("Name: ")))
-    data.append(int(input("Age: ")))
-    peoples.append(data[:])
+galera = []
+data = []
+for c in range(0,3):
+    data.append(str(input(f"name {c}: ")))
+    data.append(int(input(f"idade {c}: ")))
+    galera.append(data[:])
     data.clear()
-for p in peoples:
+for p in galera:
     if p[1] >= 21:
-        print(f"{p[0]} is above 21")
-        totabove += 1
+        print(f"{p[0]} e de maior")
     else:
-        print(f"{p[0]} is under 21")
-        totunder += 1
-print(f"there is {totabove} peoples above 21\nand {totunder} peoples under 21")
+        print(f"{p[0]} e de menor ")
