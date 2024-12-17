@@ -8,11 +8,11 @@ for c in range(0, 3):
     l2.append(int(input(f"type a num to [1,{c}]: ")))
 for c in range(0, 3):
     l3.append(int(input(f"type a num to [2,{c}]: ")))
-matrix.append(sorted(l1[:]))
+matrix.append(l1[:])
 l1.clear()
-matrix.append(sorted(l2[:]))
+matrix.append(l2[:])
 l2.clear()
-matrix.append(sorted(l3[:]))
+matrix.append(l3[:])
 l3.clear()
 for m in matrix:
     print(f"[ {m[0]} ] [ {m[1]} ] [ {m[2]} ]")
