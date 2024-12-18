@@ -2,7 +2,7 @@ num = []
 even = list()
 odd = list()
 for c in range(0, 7):
-    n = int(input(f"Type the {c+1} number: "))
+    n = int(input(f"Type the {c+1}/7 number: "))
     if n % 2 == 1:     
         even.append(n)
     if n % 2 == 0:
