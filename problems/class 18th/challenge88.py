@@ -1,15 +1,23 @@
 from random import randint
 tickets = list()
 run = list()
-count = 0
 how_many = int(input("how many tickets do you want? "))
-while True:
-    for c in range(0, 6):
-        run.append(randint(1, 60))
+tot = 1
+while tot <= how_many:
+    count = 0
+    while True:
+        num = randint(1, 60)
+        if num not in run:
+            run.append(num)
+            count += 1
+        if count >= 6:
+            break
+    run.sort()
     tickets.append(run[:])
     run.clear()
-    count += 1
-    if count == how_many:
-        break
+    tot += 1
 for e,t in enumerate(tickets):
-    print(f"ticket {e+1}: {t}")
+    print(f"ticket {e+1} ---- {t}")
+
+
+        
