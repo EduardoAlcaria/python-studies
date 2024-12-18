@@ -20,3 +20,4 @@ while choice != 999:
     for e,s in enumerate(studants):
         if choice == e:
             print(f"The {s[0]}'s grades are {s[1]}")
+            
