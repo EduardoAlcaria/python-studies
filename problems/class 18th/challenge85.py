@@ -5,6 +5,5 @@ for c in range(1, 8):
         num[0].append(n)
     if n % 2 == 1:
         num[1].append(n)
-print(num)
 print(f"the even values are {sorted(num[0])}")
 print(f"the odd values are {sorted(num[1])}")
