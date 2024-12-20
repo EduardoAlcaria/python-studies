@@ -1,11 +1,10 @@
 from random import randint
 from operator import itemgetter
+sPlayer = list()
 players = {'player1': randint(1, 6), 'player2': randint(1, 6), 'player3': randint(1, 6), 'player4': randint(1, 6)}
-sorted_players = dict()
 for k,v in players.items():
     print(f"{k} got {v}")
-print("-=" * 30)
-print("=== RANKING ===")
-sorted_players = sorted(players.items(), key=itemgetter(1), reverse=True)
-for e, p in enumerate(sorted_players):
-    print(f"{e+1} place: {p[0]} got {p[1]}")
+sPlayer = sorted(players.items(), key=itemgetter(1), reverse=True)
+print("==== RANKING ====")
+for e, s in enumerate(sPlayer):
+    print(f"    => {e+1} place: {s[0]} with {s[1]}")
