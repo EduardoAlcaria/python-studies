@@ -1,21 +1,13 @@
-player = dict()
-score = list()
-score_sum = 0
-player["name"] = str(input("Soccer player: "))
-matches  = int(input("How many matches does he played? "))
-for m in range(0, matches):
-    score.append(int(input(f"match {m} How many points? ")))
-    score_sum += score[m]
-player["score"] = score[:]
-player["score_sum"] = score_sum
-score.clear()
+from datetime import datetime
+person = dict()
+person["name"] = str(input("Name: "))
+person["age"] = int(input("Born year: "))
+person["ctps"] = int(input("Work license (type 0 if you dont have): "))
+if person["ctps"] != 0:
+    person["hireY"] = int(input("Hire year: "))
+    person["retirement"] = person["hireY"] - person["age"] + 35
+    person["salary"] = float(input("Salary: "))
+person["age"] = datetime.today().year - person["age"]
 print("-=" * 30)
-print(player)
-print("-=" * 30)
-for i, v in player.items():
-    print(f"The field {i} has the value {v}")
-print("-=" * 30)
-print(f"the player {player['name']} played {matches} matches")
-for e,g in enumerate(player["score"]):
-    print(f"     => At {e} match, he scored {g}")
-print(f"The total score was {score_sum} goals")
+for p, v in person.items():
+    print(f"{p} has the value {v}")
