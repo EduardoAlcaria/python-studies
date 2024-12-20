@@ -3,11 +3,17 @@ data = {}
 avarege_age = 0
 while True:
     data["name"] = str(input("Name: "))
+    data["gen"] = str(input("Gen: [m/f]: "))
+    while data["gen"] not in "mFfM":
+        print("ERROR! type only M or F") 
+        data["gen"] = str(input("Gen: [m/f]: "))
     data["age"] = int(input("Age: "))
-    data["gen"] = str(input("Gen [m/f]: "))
     peoples.append(data.copy())
     data.clear()
     ask_continue = str(input("Continue? [y/n]: ")).strip()
+    while ask_continue not in "yYnN":
+        print("ERROR! type only Y or N")
+        ask_continue = str(input("Continue? [y/n]: ")).strip()
     if ask_continue in "nN":
         break
 for v in peoples:
@@ -23,5 +29,5 @@ for w in peoples:
 print("\n- Peoples that are above the avarege age: ")
 for p in peoples:
     if p["age"] > avarege_age:
-        print(f"name = {p['name']}; gen = {p['gen']}; age = {p['age']}")
+        print(f"   => name = {p['name']}; gen = {p['gen']}; age = {p['age']}")
 print("<< END >>")
