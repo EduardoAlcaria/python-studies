@@ -33,5 +33,4 @@ while True:
         print(f"ERROR! There's no player with the code {choise} place try again")
     if choise == 999:
         break
-      
-            
+          
