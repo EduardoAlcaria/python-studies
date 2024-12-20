@@ -11,3 +11,4 @@ if worker['ctps'] != 0:
 print("-="*30)
 for k, v in worker.items():
     print(f"{k} got the value {v}")
+    
