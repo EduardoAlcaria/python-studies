@@ -18,10 +18,10 @@ while True:
     if ask_continue in "nN":
         break
 print("-=" * 30)
-print(f"{'Code':<2} {'Name':<10} {'Goals':>4} {'Sum':>4}")
+print(f"{'Code':<2} {'Name':<10} {'Goals':>3} {'Sum':>6}")
 print("-"*60)
 for e, p in enumerate(players):
-    print(f"{e:<2}  {p['name']:<10} {p['goals']} {p['sum_goal']:>4}")
+    print(f"{e:<2}  {p['name']:<10} {str(p['goals']):>3} {p['sum_goal']:>6}")
 while True:
     choise = int(input("Show data from which player? [999 to stop]: "))
     for i, p in enumerate(players):
