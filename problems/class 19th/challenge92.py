@@ -1,13 +1,13 @@
 from datetime import datetime
-person = dict()
-person["name"] = str(input("Name: "))
-person["age"] = int(input("Born year: "))
-person["ctps"] = int(input("Work license (type 0 if you dont have): "))
-if person["ctps"] != 0:
-    person["hireY"] = int(input("Hire year: "))
-    person["retirement"] = person["hireY"] - person["age"] + 35
-    person["salary"] = float(input("Salary: "))
-person["age"] = datetime.today().year - person["age"]
-print("-=" * 30)
-for p, v in person.items():
-    print(f"{p} has the value {v}")
+worker = dict()
+worker['name']  = str(input("Name: "))
+born = int(input("Born year: "))
+worker['age'] = datetime.today().year - born
+worker['ctps'] = int(input("Work license number: (0 if you dont have): "))
+if worker['ctps'] != 0:
+    worker['hireY'] = int(input("Hire year: "))
+    worker['salary'] = float(input("Salary: "))
+    worker['retiriment year'] = (worker["hireY"] + 35) - born
+print("-="*30)
+for k, v in worker.items():
+    print(f"{k} got the value {v}")
