@@ -1,13 +1,11 @@
-from datetime import datetime
-person = dict()
-person["name"] = str(input("Name: "))
-person["age"] = int(input("Born year: "))
-person["ctps"] = int(input("Work license (type 0 if you dont have): "))
-if person["ctps"] != 0:
-    person["hireY"] = int(input("Hire year: "))
-    person["retirement"] = person["hireY"] - person["age"] + 35
-    person["salary"] = float(input("Salary: "))
-person["age"] = datetime.today().year - person["age"]
+from random import randint
+from operator import itemgetter
+players = {'player1': randint(1, 6), 'player2': randint(1, 6), 'player3': randint(1, 6), 'player4': randint(1, 6)}
+sorted_players = dict()
+for k,v in players.items():
+    print(f"{k} got {v}")
 print("-=" * 30)
-for p, v in person.items():
-    print(f"{p} has the value {v}")
+print("=== RANKING ===")
+sorted_players = sorted(players.items(), key=itemgetter(1), reverse=True)
+for e, p in enumerate(sorted_players):
+    print(f"{e+1} place: {p[0]} got {p[1]}")
