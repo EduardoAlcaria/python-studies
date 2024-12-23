@@ -1,34 +1,35 @@
-peoples = []
-data = {}
-avarege_age = 0
+people_data = dict()
+peoples = list()
+avarage_age = 0
 while True:
-    data["name"] = str(input("Name: "))
+    people_data.clear()
+    people_data['name'] = str(input("Name: "))
     while True:
-        data["gen"] = str(input("Gen [m/f]: "))[0]
-        if data["gen"] in "mfFM":
+        people_data['gen'] = str(input("Gen [M/F]: "))[0].strip()
+        if people_data['gen'] in "mMfF":
             break
-        print("ERROR! Pleace type only M or F")
-    data["age"] = int(input("Age: "))
-    peoples.append(data.copy())
-    data.clear()
+        else:
+            print("ERROR! pleace type only M or F")
+    people_data['age'] = int(input("Age: "))
+    avarage_age += people_data['age']
+    peoples.append(people_data.copy())
     while True:
-        ask_continue = str(input("Continue? [y/n]: "))[0]
-        if ask_continue in "yYnN":
+        ask_continue = str(input("Continue? [Y/N]: "))[0].strip()
+        if ask_continue in "nNYy":
             break
-        print("ERROR! Pleace type only Y or N")
+        else:
+            print("ERROR! pleace type only Y or N")
     if ask_continue in "nN":
         break
-for v in peoples:
-    avarege_age += v['age']
-avarege_age = avarege_age/len(peoples)
-print(f"- You have typed {len(peoples)} peoples")
-print(f"- The avarege age is {avarege_age:.2f}")
-print(f"- The womans in the list are: ",end="")
+print(f"A) You have registered {len(peoples)} peoples")
+print(f"B) The avarage age is {avarage_age/len(peoples)}")
+print(f"C) The womans in the list are ",end="")
 for w in peoples:
-    if w["gen"] in "fF":
-        print(w["name"],end=" ")
-print("\n- Peoples that are above the avarege age: ")
-for p in peoples:
-    if p["age"] >= avarege_age:
-        print(f"   => name = {p['name']}; gen = {p['gen']}; age = {p['age']}")
-print("<< END >>")
+    if w['gen'] in 'fF':
+        print(w['name'],end=" ")
+print()
+print("D) Peoples that are above the avarege age: ")
+for a in peoples:
+    if a['age'] >= avarage_age/len(peoples):
+        print(f"    name = {a['name']}; gen = {a['gen']}; age = {a['age']}")
+print()
