@@ -1,14 +1,16 @@
 from datetime import datetime
 worker = dict()
-worker['name']  = str(input("Name: "))
+worker['name'] = str(input("Name: "))
 born = int(input("Born year: "))
-worker['age'] = datetime.today().year - born
-worker['ctps'] = int(input("Work license number: (0 if you dont have): "))
-if worker['ctps'] != 0:
+worker['age'] = datetime.today().year - born 
+worker['ctps'] = int(input("CTPS: (0 if you dont have): "))
+if worker['ctps'] == 0:
+    for k, v in worker.items():
+        print(f"{k} has the value {v}")
+else:
     worker['hireY'] = int(input("Hire year: "))
-    worker['salary'] = float(input("Salary: "))
-    worker['retiriment year'] = (worker["hireY"] + 35) - born
-print("-="*30)
-for k, v in worker.items():
-    print(f"{k} got the value {v}")
+    worker['retirement'] = (worker['hireY'] - born) + 35
+    worker['salary'] = float(input("First salary: "))
+    for k, v in worker.items():
+        print(f"{k} has the value {v}")
     
