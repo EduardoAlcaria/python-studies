@@ -10,4 +10,3 @@ print("======= RANKING =======")
 sorted_players = sorted(players.items(), key=itemgetter(1), reverse=True)
 for e, v in enumerate(sorted_players):
     print(f"{e+1} Place: {v[0]}")
-
