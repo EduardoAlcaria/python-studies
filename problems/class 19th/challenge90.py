@@ -1,12 +1,11 @@
 studant = dict()
-studant['name'] = str(input("Name: "))
-studant['grade'] = float(input(f"Avarege grade of {studant['name']}: "))
-if studant['grade'] >= 7:
+studant['name'] = str(input("Studant name: "))
+studant['avGrade'] = float(input("Avarege grade: "))
+if studant['avGrade'] >= 7:
     studant['status'] = "APROVED"
-elif studant['grade'] >= 5 or studant['grade'] < 7:
-    studant['status'] = "RECOVERY TEST"
+elif studant['avGrade'] >= 5 and studant['avGrade']< 7:
+    studant['status'] = "RECOVERY EXAM"
 else:
-    studant['status'] = "REPROVED"
-print()
-for k,v in studant.items():
-    print(f"{k} is igual to {v}")
+    studant["status"] = "REPROVED"
+for k, v in studant.items():
+    print(f"{k} has the value {v}")
