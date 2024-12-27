@@ -13,6 +13,7 @@ line("PyHELP system helper, Type EXIT to end")
 while True:
     h = str(input("Function or library : "))
     if h.upper() == "EXIT":
+        line("END")
         break
     else:
         syshelp(h)
