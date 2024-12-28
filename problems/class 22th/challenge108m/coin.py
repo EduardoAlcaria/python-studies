@@ -6,3 +6,5 @@ def increase(c, p):
     return ((p/100)*c) + c
 def decrease(c, p):
     return c - ((p/100)*c)
+def coin(c):
+    return f"${c}"
