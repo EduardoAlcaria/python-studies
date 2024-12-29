@@ -25,11 +25,11 @@ def line(msg):
     print("~" * l)
     print(f"{' '*15}{msg}")
     print("~" * l)
-def summary(n, pA, pD):
+def summary(n, pA=10, pD=5):
     line("PRICE SUMMARY")
-    print(f"{'Analized price:  ':<10}{coin(n):>15}")
-    print(f"{'Price times 2:   ':<10}{double(n, True):>15}")
-    print(f"{'half the price: ':<10}{half(n,True):>15}")
-    print(f"with {pA}% of augment: {increase(n, pA,True):>11}")
-    print(f"with {pD}% of reduction:{decrease(n, pD,True):>9}")
+    print(f"{'Analized price:  '}\t{coin(n)}")
+    print(f"{'Price times 2:   '}\t{double(n, True)}")
+    print(f"{'half the price: '}\t{half(n,True)}")
+    print(f"with {pA}% of augment: \t{increase(n, pA,True)}")
+    print(f"with {pD}% of reduction: \t{decrease(n, pD,True)}")
     print("~"*43)
