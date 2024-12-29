@@ -1,15 +1,10 @@
 def double(c = 0):
-    res = c * 2
-    return res
+    return c * 2
 def half(c = 0):
-    res = c / 2
-    return res
+    return c / 2
 def increase(c = 0, p = 0):
-    res = ((p/100)*c) + c
-    return res
+    return ((p/100)*c) + c
 def decrease(c = 0, p = 0):
-    res = c - ((p/100)*c)
-    return res
+    return c - ((p/100)*c) 
 def coin(c):
-    res =  f"${c:.2f}".replace('.', ',')
-    return res
+    return f"${c:.2f}".replace('.', ',')

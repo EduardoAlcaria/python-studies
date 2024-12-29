@@ -1,38 +1,29 @@
 def double(c = 0, f=False):
     if f == True:
-        res = coin(c*2)
-        return res
+        return coin(c*2)
     else:
-        res = c * 2
-        return res
+        return c * 2
 def half(c = 0, f=False):
     if f == True:
-        res =  coin(c / 2)
-        return res
+        return coin(c / 2)
     else:
-        res = c / 2
-        return res
+        return c / 2
 def increase(c = 0, p = 0, f=False):
     if f == True:
-        res = coin(c + ((p/100)*c))
-        return res
+        return coin(c + ((p/100)*c))
     else:
-        res = coin(c + ((p/100)*c))
-        return res
+        return coin(c + ((p/100)*c))
 def decrease(c = 0, p = 0, f=False):
     if f == True:
-        res = coin(c - ((p/100)*c))
-        return res
+        return coin(c - ((p/100)*c))
     else:
-        res = coin(c - ((p/100)*c))
-        return res
+        return coin(c - ((p/100)*c))
 def coin(c = 0):
-    res = f"${c:.2f}".replace('.', ',')
-    return res
+    return f"${c:.2f}".replace('.', ',')
 def line(msg):
     l = len(msg) + 30
     print("~" * l)
-    print(f"{" "*15}{msg}")
+    print(f"{' '*15}{msg}")
     print("~" * l)
 def summary(n, pA, pD):
     line("PRICE SUMMARY")
