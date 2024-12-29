@@ -1,8 +1,12 @@
 def double(c):
-    return c * 2
+    res = c * 2
+    return res
 def half(c):
-    return c / 2
+    res = c/2
+    return res
 def increase(c, p):
-    return ((p/100)*c) + c
+    res = c + (c*p/100)
+    return res
 def decrease(c, p):
-    return c - ((p/100)*c)
+    res = c - (c*p/100)
+    return res
