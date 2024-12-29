@@ -1,25 +1,34 @@
-def double(c, f=False):
+def double(c = 0, f=False):
     if f == True:
-        return coin(c*2)
+        res = coin(c*2)
+        return res
     else:
-        return c * 2
-def half(c, f=False):
+        res = c * 2
+        return res
+def half(c = 0, f=False):
     if f == True:
-        return coin(c / 2)
+        res =  coin(c / 2)
+        return res
     else:
-        return c / 2
-def increase(c, p, f=False):
+        res = c / 2
+        return res
+def increase(c = 0, p = 0, f=False):
     if f == True:
-        return coin(((p/100)*c) + c)
+        res = coin(c + ((p/100)*c))
+        return res
     else:
-        return ((p/100)*c) + c
-def decrease(c, p, f=False):
+        res = coin(c + ((p/100)*c))
+        return res
+def decrease(c = 0, p = 0, f=False):
     if f == True:
-        return coin(c - ((p/100)*c))
+        res = coin(c - ((p/100)*c))
+        return res
     else:
-        return c - ((p/100)*c)
-def coin(c):
-    return f"${c}"
+        res = coin(c - ((p/100)*c))
+        return res
+def coin(c = 0):
+    res = f"${c:.2f}".replace('.', ',')
+    return res
 def line(msg):
     l = len(msg) + 30
     print("~" * l)
@@ -33,6 +42,3 @@ def summary(n, pA, pD):
     print(f"with {pA}% of augment: {increase(n, pA,True):>11}")
     print(f"with {pD}% of reduction:{decrease(n, pD,True):>9}")
     print("~"*43)
-
-
-
