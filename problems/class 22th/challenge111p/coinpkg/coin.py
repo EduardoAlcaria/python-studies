@@ -19,11 +19,11 @@ def decrease(c, p, f=False):
     else:
         return c - ((p/100)*c)
 def coin(c):
-    return f"${c}"
+    return f"${c:.2f}"
 def line(msg):
     l = len(msg) + 30
     print("~" * l)
-    print(f"{" "*15}{msg}")
+    print(f"{' '*15}{msg}")
     print("~" * l)
 def summary(n, pA, pD):
     line("PRICE SUMMARY")
